@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+class Printer {
+public:
+    void print() { cout << "Printing document." << endl; }
+};
+
+class Scanner {
+public:
+    void scan() { cout << "Scanning document." << endl; }
+};
+
+class AllInOne : public Printer, public Scanner {
+public:
+    void copy() { cout << "Copying document." << endl; }
+};
+
+int main() {
+    AllInOne aio;
+    aio.print();
+    aio.scan();
+    aio.copy();
+    return 0;
+
+}
+
